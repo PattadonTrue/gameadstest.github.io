@@ -67,13 +67,14 @@
         function showRewardedAd() {
             if (window.AdsWebInterface) {
                 // Call Android interface
-                window.AdsWebInterface.showRewardedAd();
+                window.AdsWebInterface.showRewardedAd('/21682623839/TrueID_App/GameCenter/AllGames/KilltheVirus/Rewarded');
             } else if (window.webkit &&
                 window.webkit.messageHandlers &&
                 window.webkit.messageHandlers.ads) {
                 // Call iOS interface
                 var message = {
-                    command: 'showRewardedAd'
+                    command: 'showRewardedAd',
+                    rewardUnitId: '/21682623839/TrueID_App/GameCenter/AllGames/KilltheVirus/Rewarded'
                 };
                 window.webkit.messageHandlers.ads.postMessage(message);
             } else {
@@ -118,13 +119,14 @@
         function showInterstitialAd() {
             if (window.AdsWebInterface) {
                 // Call Android interface
-                window.AdsWebInterface.showInterstitialAd();
+                window.AdsWebInterface.showInterstitialAd('/21682623839/TrueID_App/GameCenter/AllGames/KilltheVirus/Interstitial');
             } else if (window.webkit &&
                 window.webkit.messageHandlers &&
                 window.webkit.messageHandlers.ads) {
                 // Call iOS interface
                 var message = {
-                    command: 'showInterstitialAd'
+                    command: 'showInterstitialAd',
+                    interstitialUnitId: '/21682623839/TrueID_App/GameCenter/AllGames/KilltheVirus/Interstitial'
                 };
                 window.webkit.messageHandlers.ads.postMessage(message);
             } else {
